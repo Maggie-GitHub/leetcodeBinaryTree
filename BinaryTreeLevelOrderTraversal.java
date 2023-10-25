@@ -19,9 +19,9 @@ public class BinaryTreeLevelOrderTraversal {
             int size = que.size();
             for(int i = 0; i < size; i++){
                 TreeNode node = que.poll();
-                temp.add(0, node.val);
+                temp.add(0, node.val);//from here, insert from 0
 
-                if(node.right != null){
+                if(node.right != null){//so here are right first, left second
                     que.offer(right);
                 }
                 if(node.left != null){
